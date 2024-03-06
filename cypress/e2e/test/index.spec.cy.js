@@ -1,5 +1,5 @@
-describe('template spec', () => {
-  it('passes', () => {
+describe('page redirect', () => {
+  it('select tag', () => {
     cy.visit('/')
     cy.get('[href="http://elementalselenium.com/"]').should('be.visible')
     .invoke('removeAttr', 'target').click()
@@ -8,6 +8,7 @@ describe('template spec', () => {
 
     //select in cypress
     cy.get('select').should('be.visible').select('Python')
+    cy.get("input[type = 'submit']").click()
 
   //cy origin to direct the page to the new domain in the same screen
     // cy.origin('https://elementalselenium.com/' , ()=>{
